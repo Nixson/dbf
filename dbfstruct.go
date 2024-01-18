@@ -58,9 +58,6 @@ func (dt *DbfTable) Create(spec interface{}) error {
 	if s.Kind() == reflect.Ptr {
 		s = s.Elem()
 	}
-	if s.Kind() != reflect.Struct {
-		panic("dbf: spec parameter must be a struct")
-	}
 
 	var err error
 	typeOfSpec := s.Type()
