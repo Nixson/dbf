@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/tadvi/dbf"
+	"github.com/Nixson/dbf"
 )
 
 func main() {

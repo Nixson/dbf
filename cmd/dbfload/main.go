@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tadvi/dbf"
+	"github.com/Nixson/dbf"
 )
 
 type FieldType int

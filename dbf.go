@@ -163,6 +163,12 @@ func (dt *DbfTable) SaveFile(filename string) error {
 	return nil
 }
 
+func (dt *DbfTable) ToByte() []byte {
+	// don't forget to add dbase end of file marker which is 1Ah
+	dt.dataStore = appendSlice(dt.dataStore, []byte{0x1A})
+	return dt.dataStore
+}
+
 // Sets field value by name.
 func (dt *DbfTable) SetFieldValueByName(row int, fieldName string, value string) {
 	fieldName = strings.ToUpper(fieldName)
